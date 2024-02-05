@@ -2,7 +2,7 @@ import Link from "next/link";
 
 // using traditional function
 
-export default function StudentInfo() {
+function StudentInfo() {
 let studentName = "Sang Lee";
 return(
     <>
@@ -19,6 +19,9 @@ return(
     </>
 );
 }
+export default StudentInfo;
+
+
 
 
 // using arrow function

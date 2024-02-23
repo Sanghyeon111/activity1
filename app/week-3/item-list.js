@@ -74,6 +74,7 @@ function ItemList() {
       };
       return(
         <div>
+        
             <Item 
                 name = {item1.name}
                 quantity = {item1.quantity}

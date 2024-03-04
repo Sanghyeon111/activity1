@@ -8,7 +8,6 @@ function ItemList() {
   const [sortBy, setSortBy] = useState("name");
   let items = [...itemData];
 
-
   items = items.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
 
   // if (sortBy === "name") {
@@ -33,9 +32,8 @@ function ItemList() {
 
   const renderButtons = () => {
     const buttons = [
-      { key: "name", label: "Sort by Name", color: 'bg-sky-600' },
-      { key: "category", label: "Sort by Category", color: 'bg-orange-600' },
-      { key: "category", label: "Sort by Category1", color: 'bg-green-600' }
+      { key: "name", label: "Sort by Name", color: "bg-sky-600" },
+      { key: "category", label: "Sort by Category", color: "bg-orange-600" },
     ];
 
     return buttons.map((button) => (
@@ -47,7 +45,7 @@ function ItemList() {
         {button.label}
       </button>
     ));
-  }
+  };
 
   const renderItems = () => {
     // if(sortBy === "category") {
@@ -66,19 +64,14 @@ function ItemList() {
           quantity={item.quantity}
           category={item.category}
         />
-        </li>
+      </li>
     ));
-
-  }
+  };
 
   return (
     <>
-    <div className="grid grid-flow-col gap-5">
-      {renderButtons()}
-      </div>
-      <ul className="mb-4">
-        {renderItems()}
-      </ul>
+      <div className="grid grid-flow-col gap-5">{renderButtons()}</div>
+      <ul className="mb-4">{renderItems()}</ul>
     </>
   );
 }

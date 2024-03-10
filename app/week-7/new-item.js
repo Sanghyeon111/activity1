@@ -26,7 +26,6 @@ function NewItem({ addItem }) {
     setQuantity(1);
     setCategory("Produce");
     ids.push(newItem.id);
-    console.log(newItem);
     addItem({ ...newItem, category: newItem.category.toLowerCase() });
   };
 

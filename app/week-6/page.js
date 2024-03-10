@@ -6,6 +6,7 @@ import itemData from "./items.json";
 
 export default function Page() {
   const [items, setItems] = useState(itemData);
+  console.log(items);
   const handleAddItem = (newItem) => {
     setItems([...items, newItem]);
   };
